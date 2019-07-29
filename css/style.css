@@ -120,7 +120,6 @@ h4 {
   text-align: center;
   letter-spacing: 0.05rem;
   font-family: GooperSuperItalic, Courier, Monospace;
-      text-shadow: 1px 2px #cef559;
 }
 h3 {
   font-size: 3rem;
@@ -207,7 +206,7 @@ section {
 }
 .hero {
   min-height: 100vh;
-  padding-bottom: 1rem;
+  padding-bottom: 1.6rem;
   transition: height 200ms;
 }
 .text-area {
@@ -240,7 +239,7 @@ section {
   transition: all 450ms;
 }
 .heart {
-  margin-top: 2rem;
+  margin-top: 1rem;
   max-width: 30px;
   animation: heartbeat 1s ease infinite;
   -moz-animation: heartbeat 1s ease infinite; /* Firefox */
