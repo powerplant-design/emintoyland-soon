@@ -1,0 +1,381 @@
+:root {
+  --color-main: #fc47b3;
+  --color-bg: #e4cffc;
+}
+@font-face {
+  font-family: 'GooperRegular';
+  src:  url('../fonts/gooper-regular-webfont.woff2') format('woff2'),
+        url('../fonts/gooper-regular-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+  font-family: 'GooperSuperItalic';
+  src:  url('../fonts/gooper-superitalic-webfont.woff2') format('woff2'),
+        url('../fonts/gooper-superitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  overscroll-behavior: none;
+}
+body {
+  font-family: GooperRegular, Courier, Serif;
+  font-size: 21px;
+  line-height: 1.5;
+  text-align: center;
+  background-color: var(--color-bg);
+  color: var(--color-main);
+}
+
+@media only screen and (min-width: 40rem) {
+  main::after {
+    will-change: scale;
+    transform: scale(1.05);
+    content: " ";
+    background-image: url(../imgs/eit-bg-toyland.png);
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -666;
+    width: 100vw;
+    height: 100vh;
+    transition: opacity 1000ms;
+    animation: toyparty 7s ease-in-out infinite;
+    -webkit-animation: toyparty 7s ease-in-out infinite; /* Safari 4.0 - 8.0 */
+    -moz-animation: toyparty 7s ease-in-out infinite; /* Firefox */
+    -ms-animation: toyparty 7s ease-in-out infinite; /* Firefox */
+    animation-delay: 1s;
+  }
+  /* Standard syntax */
+  @keyframes toyparty {
+    0% {
+      transform: scale(1.05);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+  @-webkit-keyframes toyparty {
+    0% {
+      transform: scale(1.05);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+  @-moz-keyframes toyparty {
+    0% {
+      transform: scale(1.05);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+  @-ms-keyframes toyparty {
+    0% {
+      transform: scale(1.05);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+}
+
+figure {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  transition: all 300ms;
+  max-width: 450px;
+  max-height: 450px;
+  margin: -6.3rem 0 -2rem 0;
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+a::selection,
+p::selection {
+  color: var(--color-bg);
+  background-color: var(--color-main);
+}
+h3,
+h4 {
+  text-align: center;
+  letter-spacing: 0.05rem;
+  font-family: GooperSuperItalic, Courier, Monospace;
+      text-shadow: 1px 2px #cef559;
+}
+h3 {
+  font-size: 3rem;
+  margin: 1rem 1.2rem 0 0;
+}
+h4 {
+  font-size: 2rem;
+  margin-top: 1.8rem;
+}
+.text-box p {
+  margin: 1rem 0;
+}
+.text-box a,
+.text-box a:visited {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color: var(--main-color);
+}
+.text-box a:hover {
+  text-decoration-style: solid;
+}
+main {
+  width: 100%;
+  height: 100vh;
+  animation: fadeIn 2s ease 1;
+  -webkit-animation: fadeIn 2s ease 1;
+  -moz-animation: fadeIn 2s ease 1;
+  -ms-animation: fadeIn 2s ease 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero {
+  min-height: 100vh;
+  padding-bottom: 1rem;
+  transition: height 200ms;
+}
+.text-area {
+  height: calc(100vh - 30px);
+}
+.hero-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+/*   animation: fadeIn 2s ease 1;
+  -moz-animation: fadeIn 2s ease 1;
+  -webkit-animation: fadeIn 2s ease 1; */
+}
+.sparklez {
+  position: absolute;
+  max-width: 450px;
+  opacity: 0.8;
+  padding-top: 4rem;
+  transition: all 150ms;
+}
+.main-title {
+  max-width: 500px;
+  padding-left: 0.5rem;
+  transition: all 450ms;
+}
+.sub-title {
+  max-width: 270px;
+  padding-left: 0.4rem;
+  transition: all 450ms;
+}
+.heart {
+  margin-top: 2rem;
+  max-width: 30px;
+  animation: heartbeat 1s ease infinite;
+  -moz-animation: heartbeat 1s ease infinite; /* Firefox */
+  -webkit-animation: heartbeat 1s ease infinite; /* Safari 4.0 - 8.0 */
+    animation-delay: 2s;
+}
+/* Standard syntax */
+@keyframes heartbeat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Firefox */
+@-moz-keyframes heartbeat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes heartbeat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.text-box {
+  max-width: 40rem;
+  padding: 0 1rem;
+  text-align: left;
+}
+footer {
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  height: 30px;
+}
+footer a,
+footer a:visited {
+  text-decoration: none;
+  color: var(--color-main);
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* QUERIES BEGIN */
+
+@media only screen and (max-width: 60rem) {
+  body {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.6rem;
+  }
+  .text-box {
+    max-width: 29.5rem;
+  }
+}
+
+@media only screen and (max-width: 40rem) {
+  body {
+    line-height: 1.6;
+  }
+  main {
+		animation-duration: 1.4s;
+  }
+  p {
+    margin: 1.2rem 0;
+  }
+  h3 {
+    margin-top: 1rem;
+    margin-bottom: 1.6rem;
+    font-size: 1.6rem;
+  }
+  h4 {
+    margin-top: 1.6rem;
+    font-size: 1.2rem;
+  }
+  .hero {
+    min-height: auto;
+  }
+  .hero-box {
+    padding-top: 1.6rem;
+    padding-left: 0;
+  }
+  figure {
+    max-width: 300px;
+    max-height: 300px;
+    margin: -4.2rem 0 -1.4rem 0;
+  }
+  .sparklez {
+    max-width: 300px;
+    padding-top: 2.6rem;
+  }
+  .main-title {
+    max-width: 300px;
+    padding-left: 0.2rem;
+  }
+  .sub-title {
+    max-width: 200px;
+    padding-left: 0.2rem;
+  }
+  .text-area {
+    height: auto;
+    margin-top: 3rem;
+		margin-bottom: 3rem;
+  }
+  .text-box {
+    max-width: 26rem;
+    padding: 0 1rem 1.6rem 1rem;
+  }
+  footer {
+    font-size: 0.5rem;
+  }
+  main::after {
+    display: none;
+  }
+}
