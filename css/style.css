@@ -225,8 +225,9 @@ section {
   position: absolute;
   max-width: 450px;
   opacity: 0.8;
-  padding-top: 4rem;
   transition: all 150ms;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .main-title {
   max-width: 500px;
@@ -352,7 +353,6 @@ footer a:hover {
   }
   .sparklez {
     max-width: 300px;
-    padding-top: 2.6rem;
   }
   .main-title {
     max-width: 300px;
