@@ -1,13 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap');
 :root {
   --color-main: #fc47b3;
   --color-bg: #e4cffc;
-}
-@font-face {
-  font-family: 'GooperRegular';
-  src:  url('../fonts/gooper-regular-webfont.woff2') format('woff2'),
-        url('../fonts/gooper-regular-webfont.woff') format('woff');
-   font-weight: normal;
-   font-style: normal;
 }
 @font-face {
   font-family: 'GooperSuperItalic';
@@ -20,9 +14,9 @@ html {
   overscroll-behavior: none;
 }
 body {
-  font-family: GooperRegular, Courier, Serif;
+  font-family: 'Lexend Deca', sans-serif;
   font-size: 21px;
-  line-height: 1.5;
+  line-height: 1.55;
   text-align: center;
   background-color: var(--color-bg);
   color: var(--color-main);
@@ -49,7 +43,7 @@ body {
     -ms-animation: toyparty 7s ease-in-out infinite; /* Firefox */
     animation-delay: 1s;
   }
-  /* Standard syntax */
+
   @keyframes toyparty {
     0% {
       transform: scale(1.05);
@@ -128,6 +122,11 @@ h3 {
 h4 {
   font-size: 2rem;
   margin-top: 1.8rem;
+}
+.text-box {
+  max-width: 38rem;
+  padding: 0 1rem;
+  text-align: left;
 }
 .text-box p {
   margin: 1rem 0;
@@ -217,9 +216,6 @@ section {
   flex-direction: column;
   align-items: center;
   position: relative;
-/*   animation: fadeIn 2s ease 1;
-  -moz-animation: fadeIn 2s ease 1;
-  -webkit-animation: fadeIn 2s ease 1; */
 }
 .sparklez {
   position: absolute;
@@ -245,7 +241,7 @@ section {
   animation: heartbeat 1s ease infinite;
   -moz-animation: heartbeat 1s ease infinite; /* Firefox */
   -webkit-animation: heartbeat 1s ease infinite; /* Safari 4.0 - 8.0 */
-    animation-delay: 2s;
+  animation-delay: 2s;
 }
 /* Standard syntax */
 @keyframes heartbeat {
@@ -283,11 +279,6 @@ section {
     transform: translateY(0);
   }
 }
-.text-box {
-  max-width: 40rem;
-  padding: 0 1rem;
-  text-align: left;
-}
 footer {
   font-size: 0.6rem;
   letter-spacing: 0.05em;
@@ -303,7 +294,6 @@ footer a:hover {
 }
 
 /* QUERIES BEGIN */
-
 @media only screen and (max-width: 60rem) {
   body {
     font-size: 16px;
@@ -316,7 +306,7 @@ footer a:hover {
     font-size: 1.6rem;
   }
   .text-box {
-    max-width: 29.5rem;
+    max-width: 27rem;
   }
 }
 
@@ -341,6 +331,7 @@ footer a:hover {
   }
   .hero {
     min-height: auto;
+    padding: 0 1rem;
   }
   .hero-box {
     padding-top: 1.6rem;
